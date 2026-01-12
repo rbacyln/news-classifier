@@ -1,71 +1,25 @@
----
-title: Multi-label News Classifier (Pro)
-emoji: 📰
-colorFrom: indigo
-colorTo: purple
-sdk: gradio
-sdk_version: 4.44.0
-app_file: app.py
-pinned: false
----
+# 📰 Dynamic News Classification with Zero-Shot Learning
 
-# 📰 Multi-label News Classifier (Pro)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![NLP](https://img.shields.io/badge/NLP-Zero--Shot-green)
+![Gradio](https://img.shields.io/badge/Gradio-Demo-orange)
 
-This project is a **multi-label text classification app** that predicts the categories of news snippets.  
-It was trained on a subset of the **20 Newsgroups dataset** and can assign multiple labels to a single text.
+## 📌 Project Overview
+This project is a **Dynamic News Classifier** that uses **Zero-Shot Learning (BART/DistilBART)**. Unlike traditional classifiers that are limited to pre-defined labels, this model can categorize text into ANY category defined by the user at runtime.
 
-🚀 **Live Demo on Hugging Face Spaces**: [👉 Try it here](https://huggingface.co/spaces/rabiaceylan/news-classifier)
+## 🧠 Why Zero-Shot Learning?
+Traditional models require thousands of examples for each category. With **Zero-Shot Learning**, the model understands the semantic relationship between the text and the labels provided. You can perform the classification instantly without further training.
 
----
+## 🚀 How to Run
+1. Clone the repo: `git clone https://github.com/rbacyln/news-classifier.git`
+2. Install dependencies: `pip install transformers torch gradio`
+3. Run the notebook: `ai_news_classifier_zeroshot.ipynb`
 
-## 📂 Project Structure
-- `app.py` → Gradio app for deployment  
-- `model_multi.pkl` → Trained classifier (One-vs-Rest Logistic Regression)  
-- `tfidf.pkl` → TF-IDF vectorizer  
-- `requirements.txt` → Python dependencies  
-- `README.md` → Project documentation  
+## 🖥️ Interactive UI
+The project includes a **Gradio interface** where you can:
+- Input a news headline.
+- Provide custom labels (comma-separated).
+- See real-time confidence scores for each label.
 
 ---
-
-## ⚙️ Features
-- Multi-label classification with probabilities  
-- Adjustable decision threshold  
-- Interactive Gradio UI with plots and tables  
-- Preloaded test examples for quick try-out  
-
----
-
-## 🧠 Model
-- **Algorithm**: One-vs-Rest Logistic Regression  
-- **Features**: TF-IDF with 5000 max features  
-- **Dataset**: Subset of 20 Newsgroups (`comp.graphics`, `rec.sport.baseball`, `sci.space`, `talk.politics.mideast`)  
-
-### Performance (Multi-label setup)
-- **Micro-F1**: ~0.88  
-- **Macro-F1**: ~0.89  
-- **Sample-F1**: ~0.85  
-
----
-
-## 📊 Example Predictions
-Input:  
-NASA announces a new lunar mission with satellite support
-Output:  
-- **Predicted Labels**: `sci.space, talk.politics.mideast`  
-- Probabilities chart displayed in UI  
-
----
-
-## 🚀 Run Locally
-```bash
-# Clone this repo
-git clone https://github.com/<your-username>/news-classifier.git
-cd news-classifier
-
-# Create virtual env & install dependencies
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-
-# Run the Gradio app
-python app.py
+*Developed by Rabia Ceylan as a modern NLP implementation project.*

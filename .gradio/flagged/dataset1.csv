@@ -1,5 +1,0 @@
-News text,Predicted Labels,Probabilities (all classes),timestamp
-space,"Predicted labels: sci.space, talk.politics.mideast","comp.graphics: 0.038
-rec.sport.baseball: 0.010
-sci.space: 0.999
-talk.politics.mideast: 0.562",2025-08-21 18:54:32.317747
